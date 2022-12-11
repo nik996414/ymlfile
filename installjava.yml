@@ -1,0 +1,8 @@
+---
+- hosts: openjdk
+  become: yes
+  tasks:
+  - name: install java on ubuntu
+    apt:
+      name: "{{java}}"
+      state: present
