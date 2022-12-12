@@ -1,2 +1,3 @@
 ---
-java: awscli
+webserver: apache2
+cli: awscli
