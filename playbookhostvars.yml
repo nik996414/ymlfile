@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.47.149
+  become: yes
+  vars:
+    var1: git
+    var2: tree
+    var3: wget
+
+  tasks:
+  - name: display var1
+    debug:
+      msg: "{{var1}}"
+        
