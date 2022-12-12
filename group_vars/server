@@ -1,0 +1,4 @@
+---
+java: openjdk-8-jre
+webserver: apache2
+cli: awscli
