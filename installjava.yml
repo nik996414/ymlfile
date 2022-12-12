@@ -6,3 +6,8 @@
     apt:
       name: "{{java}}"
       state: present
+  
+  - name: start java on ubuntu
+    service:
+      name: "{{java}}"
+      state: started
