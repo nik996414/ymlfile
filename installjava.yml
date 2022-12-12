@@ -4,5 +4,5 @@
   tasks:
   - name: install java on ubuntu
     apt:
-      name: "{{openjdk-11-jre}}"
+      name: "{{java}}"
       state: present
