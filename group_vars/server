@@ -1,3 +1,2 @@
 ---
-webserver: apache2
-cli: awscli
+java: openjdk-11-jre
