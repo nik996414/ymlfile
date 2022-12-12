@@ -1,0 +1,8 @@
+---
+- hosts: 172.31.47.149
+  become: yes
+  tasks:
+  - name: install webserver on ubuntu
+    apt:
+      name: "{{webserver}}"
+      state: present
