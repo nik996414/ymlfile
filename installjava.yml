@@ -1,5 +1,6 @@
 ---
 - hosts: server
+
   become: yes
   tasks:
   - name: install java on ubuntu
@@ -12,22 +13,4 @@
       name: "{{java}}"
       state: started
 
-  - name: install webserver on ubuntu
-    apt:
-      name: "{{webserver}}"
-      state: present
-
-  - name: start webserver  on ubuntu
-    service:
-      name: "{{webserver}}"
-      state: started
-
-  - name: install awscli on ubuntu
-    apt:
-      name: "{{cli}}"
-      state: present
-
-  - name: start awscli  on ubuntu
-    service:
-      name: "{{cli}}"
-      state: started      
+ 
