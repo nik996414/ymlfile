@@ -1,0 +1,9 @@
+---
+- hosts: 172.31.47.149
+  become: yes
+  tasks:
+  - include_tasks: myfile.yml
+  - name: copy file
+    copy:
+      src: mytest.txt
+      dest: /home/ubuntu/my2ndfile
