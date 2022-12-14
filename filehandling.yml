@@ -13,13 +13,14 @@
       name: apache2
       state: present
 
-  - name: remote file
-    get_url:
-      url: https://s3demonik.s3.ap-south-1.amazonaws.com/mahalogin/Dockerfile
-      dest: /home/ubuntu/Dockerfile
-      force_basic_auth: yes
-
   - name: dyno file
     template:
       src: index.j2
       dest: /var/www/html/index.html
+    notify: restarted
+
+  handlers:
+  - name: restart webserver
+    service:
+      name: apache2
+      state: restarted
