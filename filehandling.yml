@@ -13,6 +13,12 @@
       name: apache2
       state: present
 
+  - name: remote file
+    get_url:
+      url: https://s3demonik.s3.ap-south-1.amazonaws.com/mahalogin/
+      dest: /home/ubuntu/
+      force_basic_auth: yes
+
   - name: dyno file
     template:
       src: index.j2
