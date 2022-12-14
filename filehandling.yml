@@ -7,3 +7,13 @@
     copy:
       src: mytest.txt
       dest: /home/ubuntu/my2ndfile
+
+  - name: install webserver
+    apt:
+      name: apache2
+      state: present
+
+  - name: dyno file
+    template:
+      src: index.j2
+      dest: /var/www/html/index.html
