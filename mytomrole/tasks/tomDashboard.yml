@@ -1,19 +1,19 @@
 ---
 - name: copy tomuser file into node side
   template:
-    src: /templates/tomuser.j2
-    dest: /opt/tomcat/conf/tomcat-users.xml
+     src: templates/tomuser.j2
+     dest: /opt/tomcat/conf/tomcat-users.xml
 - name: copy tomcontext file into node side
   template:
-    src: /templates/tomcontext.j2
+    src: templates/tomcontext.j2
     dest: /opt/tomcat/webapps/manager/META-INF/context.xml
 
 - name: copy tomhostcontext file into node side
   template:
-    src: /templates/tomhostcontext.j2
+    src: templates/tomhostcontext.j2
     dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
 
 - name: copy tomservice file into node side
   template:
-    src: /templates/tomservice.j2
+    src: templates/tomservice.j2
     dest: /etc/systemd/system/tomcat.service
