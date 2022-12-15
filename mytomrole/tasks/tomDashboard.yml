@@ -3,7 +3,6 @@
   template:
     src: /templates/tomuser.j2
     dest: /opt/tomcat/conf/tomcat-users.xml
-
 - name: copy tomcontext file into node side
   template:
     src: /templates/tomcontext.j2
